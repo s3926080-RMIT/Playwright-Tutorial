@@ -168,6 +168,18 @@ test.describe('suite1', () =>{
         const basicFormButtonLabel = await basicFormButton.textContent()
         expect(basicFormButtonLabel).toEqual("Submit")
 
+        // Locator assertion
+        // So you know how locators point to elements based on given parameters like 'button' and stuff?
+        // Yeah you can also assert it like this. 
+        // Pretty much pointing at something and then asking "Hey does this thing say X?"
+        await expect(basicFormButton).toHaveText('Submit')
 
+        
+        // Soft assertion
+        // So instead of calling and error and grinding the test script to a halt, this only calls the error but then
+        // proceeds with the test. Similar to the locator assertion above, this code asserts the text on the basicFormButton,
+        // but instead of calling error and then cancel the rest of the script, it only calls error then stick click the button.
+        await expect.soft(basicFormButton).toHaveText('Submit5')
+        await basicFormButton.click()
     })
 })
