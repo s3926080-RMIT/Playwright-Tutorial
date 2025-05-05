@@ -1,12 +1,10 @@
 import { Locator, Page } from "@playwright/test"
 import { group } from "console"
+import { HelperBase } from "./helperBase"
 
-export class NavigationPage {
-
-    readonly page: Page
-    
+export class NavigationPage extends HelperBase{    
     constructor(page: Page) {
-        this.page = page
+        super(page)
     }
 
     // Before, throughout the tutorial, to navigate to a specific webpage, we would use click(). We still do. However,

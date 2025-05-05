@@ -60,3 +60,16 @@ test('Timeouts', async({page}) => {
     // You can also assign a timeout for specific functions
     await successElement.click({timeout: 16000})
 })
+
+test('generated test', async ({ page }) => {
+  await page.goto('http://localhost:4200/pages/iot-dashboard');
+  
+  await page.getByRole('link', { name: 'Forms' }).click();
+  await page.getByRole('link', { name: 'Form Layouts' }).click();
+  await page.getByRole('textbox', { name: 'Jane Doe' }).click();
+  await page.getByRole('textbox', { name: 'Jane Doe' }).fill('Shmuck');
+  await page.getByRole('textbox', { name: 'Jane Doe' }).press('Tab');
+  await page.locator('form').filter({ hasText: 'Remember meSubmit' }).getByPlaceholder('Email').fill('cum@lord.com');
+  await page.locator('form').filter({ hasText: 'Remember meSubmit' }).locator('span').first().click();
+  await page.locator('form').filter({ hasText: 'Remember meSubmit' }).getByRole('button').click();
+});

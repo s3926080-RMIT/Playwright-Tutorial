@@ -1,5 +1,10 @@
 import {test, expect} from '@playwright/test'
 
+
+// Declare for this specific test file, use one of the following modes.
+// test.describe.configure({mode: 'parallel'})
+// test.describe.configure({mode: 'serial'})
+
 test.beforeEach(async({page}) => {
     await page.goto('http://localhost:4200/', { waitUntil: 'domcontentloaded' })
 })
