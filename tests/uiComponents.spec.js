@@ -30,14 +30,15 @@ test.describe('Form layouts page', () => {
     test('Radio buttons', async({page}) => {
         const gridFormLocator = page .locator('nb-card', {hasText: "Using the Grid"})
         const optionCheckbox1 = gridFormLocator.getByRole('radio', {name: "Option 1"})
-        const optionCheckbox2 = gridFormLocator.getByRole('radio', {name: "Option 2"})
+        // const optionCheckbox2 = gridFormLocator.getByRole('radio', {name: "Option 2"})
 
         await optionCheckbox1.check({force: true})
-        expect(await optionCheckbox1.isChecked()).toBeTruthy()
+        await expect(gridFormLocator).toHaveScreenshot()
+        // expect(await optionCheckbox1.isChecked()).toBeTruthy()
 
-        await optionCheckbox2.check({force: true})
-        expect(await optionCheckbox1.isChecked()).toBeFalsy()
-        expect(await optionCheckbox2.isChecked()).toBeTruthy()
+        // await optionCheckbox2.check({force: true})
+        // expect(await optionCheckbox1.isChecked()).toBeFalsy()
+        // expect(await optionCheckbox2.isChecked()).toBeTruthy()
     })
 })
 

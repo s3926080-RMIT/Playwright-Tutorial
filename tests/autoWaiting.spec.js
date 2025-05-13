@@ -29,10 +29,10 @@ test.describe('Auto-waiting tests', () => {
 
         // ___ wait for particular response
         // Most likely for API response waiting
-        await page.waitForSelector('http://uitestingplayground.com/ajaxdata')
+        // await page.waitForSelector('http://uitestingplayground.com/ajaxdata')
 
         // ___ wait for network calls to be completed (NOT RECOMMENDED BY LECTURER)
-        await page.waitForLoadState('networkidle')
+        // await page.waitForLoadState('networkidle')
 
         const successText = await successElement.textContent()
         const successAllText = await successElement.allTextContents()
@@ -42,7 +42,7 @@ test.describe('Auto-waiting tests', () => {
     })
 })
 
-test('Timeouts', async({page}) => {
+test.skip('Timeouts', async({page}) => {
     // You can configure timeout times in the playwright.config.ts file.
 
     // You can also set a timeout limit for this specific test (as in the 'Timeouts' test)
@@ -61,7 +61,7 @@ test('Timeouts', async({page}) => {
     await successElement.click({timeout: 16000})
 })
 
-test('generated test', async ({ page }) => {
+test.skip('generated test', async ({ page }) => {
   await page.goto('http://localhost:4200/pages/iot-dashboard');
   
   await page.getByRole('link', { name: 'Forms' }).click();

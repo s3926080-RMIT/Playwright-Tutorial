@@ -18,7 +18,7 @@ test('Navigate to Form page', async({page}) => {
     await pageManager.navigateTo().toDatePickerPage()
 })
 
-test('Parameterized methods @cum', async({page}) => {
+test('Parameterized methods @hehe', async({page}) => {
     const pageManager = new PageManager(page)
     const randomFullname = faker.person.fullName()
     const randomPassword = faker.animal.cat()
@@ -38,7 +38,7 @@ test('Parameterized methods @cum', async({page}) => {
     await pageManager.formLayouts().inLineFormSubmitWithNameEmailAndCheckbox(randomFullname, randomEmail, true)
 })
 
-test('Date picker @cum', async({page}) => {
+test('Date picker @hehe', async({page}) => {
     const pageManager = new PageManager(page)
 
     await pageManager.navigateTo().toDatePickerPage()

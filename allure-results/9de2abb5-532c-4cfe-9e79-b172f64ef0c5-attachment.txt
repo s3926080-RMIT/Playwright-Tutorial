@@ -1,0 +1,2 @@
+[ 'Option 1', 'Option 2', 'Disabled Option' ]
+Email field's class and id respectively:  Class:  input-full-width size-medium status-basic shape-rectangle nb-transition cdk-focused cdk-program-focused Id:  exampleInputEmail1

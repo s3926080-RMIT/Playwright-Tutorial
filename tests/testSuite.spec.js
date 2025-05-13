@@ -5,15 +5,15 @@ test.beforeEach(async({page}) => {
     await page.getByText('Forms').click()
     await page.getByText('Form layouts').click()
 }) 
-    
-
 
 test.describe('suite1', () =>{
     test('Locator syntax rules', async({page}) => {
         await page.locator('input').first().click()
 
         // Find by ID
+        // await 
         page.locator('#inputEmail1')
+        // .click()
 
         // Find by Class
         page.locator('.shape-rectangle')
@@ -74,7 +74,7 @@ test.describe('suite1', () =>{
 
     test('Parent element locator', async({page}) => {
         console.log(await page.locator('nb-card').count())
-        console.log(await page.locator('nb-card').filter({has: page.locator('nb-checkboxes')}).count())
+        await page.locator('nb-card').filter({has: page.locator('nb-checkboxes')}).click()
         console.log(
             await page  .locator('nb-card')
                         .filter({has: page.locator('nb-checkbox')})

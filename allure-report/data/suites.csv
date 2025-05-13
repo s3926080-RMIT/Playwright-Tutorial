@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","5369","Date picker @hehe","chromium","Tue May 06 07:32:29 ICT 2025","passed","Tue May 06 07:32:35 ICT 2025","","usePageObjects.spec.js","",""
+"","4802","Parameterized methods @hehe","chromium","Tue May 06 07:32:29 ICT 2025","passed","Tue May 06 07:32:34 ICT 2025","","usePageObjects.spec.js","",""
+"","5288","Navigate to Form page","chromium","Tue May 06 07:32:29 ICT 2025","passed","Tue May 06 07:32:35 ICT 2025","","usePageObjects.spec.js","",""
